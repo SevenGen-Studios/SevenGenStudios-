@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "./components";
 
 export const metadata: Metadata = {
   title: "SevenGen Studios",
-  description: "An Indigenous-led Saskatchewan digital studio building community websites, useful products and clearer information systems.",
+  description: "SevenGen Studios is an Indigenous-led Saskatchewan technology studio building accessible software and data tools, including OpenBand.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
