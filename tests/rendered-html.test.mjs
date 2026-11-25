@@ -30,6 +30,6 @@ test("renders SevenGen Studios metadata", async () => {
   assert.match(html, /<title>SevenGen Studios<\/title>/i);
   assert.match(
     html,
-    /<meta(?=[^>]*\bname=["']description["'])(?=[^>]*\bcontent=["']An Indigenous-led Saskatchewan digital studio building community websites, useful products and clearer information systems\.["'])[^>]*>/i,
+    /<meta(?=[^>]*\bname=["']description["'])(?=[^>]*\bcontent=["']SevenGen Studios is an Indigenous-led Saskatchewan technology studio building accessible software and data tools, including OpenBand\.["'])[^>]*>/i,
   );
 });

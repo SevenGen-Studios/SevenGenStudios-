@@ -1,20 +1,18 @@
-import { Arrow } from "../components";
 import type { Metadata } from "next";
+import { FeatureGrid, Reach, ProvinceLinks, SourceProcess, PartnerCTA } from "../openband-showcase";
 
 export const metadata: Metadata = {
-  title: "Work | SevenGen Studios",
-  description: "Explore openband.ca, the flagship digital product built by SevenGen Studios.",
+  title: "OpenBand | SevenGen Studios",
+  description: "Discover OpenBand, SevenGen Studios’ free First Nations public records, financial intelligence and community information platform.",
 };
-
-export default function WorkPage() {
-  return (
-    <main className="subpage">
-      <section className="page-hero"><p className="kicker">Work · 01</p><h1>Things we’ve<br />put into the world.</h1><p>We build our own products and apply the same thinking to work created with communities.</p></section>
-      <section className="openband-case">
-        <div className="case-copy"><span>Flagship product · Live</span><h2>openband.ca</h2><p>Making Saskatchewan First Nations public records, community information, projects and opportunities easier to find and verify.</p><dl><div><dt>Role</dt><dd>Research, product strategy, data and development</dd></div><div><dt>Coverage</dt><dd>74 Saskatchewan First Nations</dd></div><div><dt>Status</dt><dd>Continuously expanding</dd></div></dl><a className="line-link" href="https://openband.ca" target="_blank" rel="noreferrer">Visit openband.ca <Arrow /></a></div>
-        <div className="case-ui"><div className="browser-bar"><span /><span /><span /><small>openband.ca</small></div><div className="case-nav"><b>openband.ca</b><span>Browse&nbsp;&nbsp; News&nbsp;&nbsp; How it works&nbsp;&nbsp; About</span></div><div className="case-search"><small>FIRST NATIONS PUBLIC FINANCIAL RECORDS</small><strong>Search Saskatchewan<br />First Nations.</strong><div>Search a First Nation <b>⌕</b></div></div><div className="case-stats"><span><b>74</b>Communities</span><span><b>553</b>Parsed filings</span><span><b>FNFTA</b>Official source</span></div></div>
-      </section>
-      <section className="next-work"><p className="kicker">What comes next</p><h2>One product live.<br />More being built.</h2><p>SevenGen Studios is early. This portfolio will grow through our own products and carefully selected community projects.</p></section>
-    </main>
-  );
+export default function WorkPage(){
+  return <main className="subpage sg-work">
+    <section className="sg-section sg-work-hero"><div><p className="kicker">SevenGen Studios / Flagship product</p><h1>OpenBand<em>.ca</em></h1><p className="sg-lead">A clearer way to explore First Nations public financial records, community information and economic activity.</p><div className="sg-actions"><a className="sg-button" href="https://openband.ca/" target="_blank" rel="noreferrer">Open the live platform ↗</a><a className="sg-button sg-button-outline" href="#features">Explore features ↓</a></div></div><figure className="sg-product-preview"><a href="https://openband.ca/" target="_blank" rel="noreferrer"><img src="/openband-home.svg" alt="Earlier OpenBand Saskatchewan homepage" width="1280" height="720"/></a><figcaption>Earlier Saskatchewan homepage · Explore the current live product</figcaption></figure></section>
+    <Reach/>
+    <section className="sg-section sg-features" id="features"><p className="kicker">The product</p><h2>One platform. Six connected experiences.</h2><p className="sg-section-intro">Built around accessible public information, original sources and transparent filing status. Feature availability varies by community.</p><FeatureGrid/></section>
+    <section className="sg-section sg-coverage"><p className="kicker">Coverage / November 2026</p><h2>Three provinces.<br/>Growing community by community.</h2><ProvinceLinks/><div className="sg-alberta"><div><p className="kicker">Alberta coverage example</p><h3>Explore the records behind the numbers.</h3><p>OpenBand’s Alberta page reports the following coverage as of November 24, 2026. These figures are a snapshot, not a claim that every community has complete records.</p><a className="sg-inline-link" href="https://openband.ca/alberta-coverage-report.html" target="_blank" rel="noreferrer">View the coverage report ↗</a></div><dl><div><dt>Communities tracked</dt><dd>48</dd></div><div><dt>With parsed data</dt><dd>41</dd></div><div><dt>Parsed filings</dt><dd>238</dd></div></dl></div></section>
+    <SourceProcess/>
+    <section className="sg-section sg-principles"><p className="kicker">Our commitment</p><h2>Public access. Responsible development.</h2><p>OpenBand is independent and is not an official government or First Nation service. We aim to keep public information accessible, make limitations visible, and respect First Nations' authority over their own information. Public availability is not a substitute for community consent where it is required.</p><p>We welcome corrections, community feedback and opportunities to improve the platform. OpenBand is evolving; we do not claim complete national coverage or independently verified accuracy for every record.</p></section>
+    <PartnerCTA/>
+  </main>
 }
